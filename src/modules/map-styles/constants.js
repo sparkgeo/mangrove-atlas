@@ -48,7 +48,22 @@ const geojsons = [
     },
     layers: alerts,
   },
-];
+  {
+    id: 'restoration-sites',
+    source: {
+      type: 'geojson',
+      // Data formatted in mapStyle selector.
+      // Data initially fetched by Pages component (initializeApp).
+    },
+    layers: [
+      {
+        id: 'restoration-sites',
+        type: 'circle',
+        source: 'restoration-sites'
+      }]
+  }
+]; 
+
 const vectors = [
   {
     id: "restoration",
@@ -242,6 +257,7 @@ export const layersMap = {
     },
   ],
   extent: extentLayers,
+  'restoration-sites': [{layerId: 'restoration-sites'}]
 };
 
 export const LAYERS_ORDER = [
