@@ -93,7 +93,7 @@ export default {
       ]
     },
     {
-      "name": "Restoration Sites",
+      "name": "Mangrove Restoration Sites",
       "slug": "restoration_sites",
       "locationType": [
         "worldwide"
@@ -308,6 +308,10 @@ export default {
     {
       "name": "Mangrove biomass",
       "id": "biomass"
+    },
+    {
+      "name": "Mangrove Restoration Sites",
+      "id": "restoration-sites"
     },
     {
       "name": "Mangrove deforestation alerts",

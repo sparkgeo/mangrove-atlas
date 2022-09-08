@@ -35,6 +35,20 @@ const geojsons = [
       // data: 'https://us-central1-mangrove-atlas-246414.cloudfunctions.net/fetch-alerts-heatmap?{{start_date}}&{{end_date}}&{{locationId}}'
     },
     layers: alerts
+  },
+  {
+    id: 'restoration-sites',
+    source: {
+      type: 'geojson',
+      // Data formatted in mapStyle selector.
+      // Data initially fetched by Pages component (initializeApp).
+    },
+    layers: [
+      {
+        id: 'restoration-sites',
+        type: 'circle',
+        source: 'restoration-sites'
+      }]
   }
 ]; 
 
@@ -802,6 +816,7 @@ const layersMap = {
       maxZoom: 12
     }
   ],
+  'restoration-sites': [{layerId: 'restoration-sites'}]
 };
 
 
